@@ -1,0 +1,16 @@
+@* @using AnimalShelter.Models;
+@model List<Animal>;
+
+@{
+  Layout = "_Layout";
+}
+
+<h4>Add a new task</h4>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model._Name)
+  @Html.TextBoxFor(model => model._Gender)
+  <input type="submit" value="Add new task" />
+}
+
+<p>@Html.ActionLink("Show all items", "Index")</p> *@
