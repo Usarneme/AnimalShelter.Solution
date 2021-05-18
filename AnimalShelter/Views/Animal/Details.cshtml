@@ -1,10 +1,20 @@
-@* @model AnimalShelter.Models.Animal;
+@model AnimalShelter.Models.Animal;
 
 @{
   Layout = "_Layout";
 }
 
-<h2>Item Details</h2>
-<hr />
-<h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h3>
-<p>@Html.ActionLink("Back to list", "Index")</p> *@
+<div class="container-fluid">
+  <h2 class="pt-5 pb-3">Item Details</h2>
+  <hr />
+  <div class="container d-flex flex-column">
+    <p>Name: @Model.Name</p>
+    <p>Breed: @Model.Breed</p>
+    <p>Type: @Model.Type</p>
+    <p>AdmittanceDate: @Model.AdmittanceDate</p>
+    <p>EstimatedAge: @Model.EstimatedAge</p>
+    <p>Gender: @Model.Gender</p>
+    <p>Color: @Model.Color</p>
+  </div>
+  <p>@Html.ActionLink("Back to list", "Index", "Animal")</p>
+</div>
