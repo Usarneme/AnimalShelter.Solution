@@ -8,6 +8,7 @@
 <div class="container-fluid">
   <h2 class="pt-5 pb-3">Add a new animal</h2>
   <div class="container form_container">
+  
     @using (Html.BeginForm())
     {
       @Html.LabelFor(model => model.Name)
@@ -20,18 +21,18 @@
       @Html.TextBoxFor(model => model.Type)
 
       @Html.LabelFor(model => model.AdmittanceDate)
-      @Html.TextBoxFor(model => model.AdmittanceDate, new { @type = "date" , @value = DateTime.Now })
+      @Html.TextBoxFor(model => model.AdmittanceDate,
+            new { @type = "date" , @value = DateTime.Now })
 
       @Html.LabelFor(model => model.EstimatedAge)
       @Html.TextBoxFor(model => model.EstimatedAge,
             new { @type = "number", @min = "0" })
 
       @Html.LabelFor(model => model.Gender)
-      @Html.RadioButtonFor(model => model.Gender, "Male", new { @id="gender_male" })
-      @Html.LabelFor(model => model.Gender, "Male")
-
-      @Html.RadioButtonFor(model => model.Gender, "Female", new { @id="gender_female" })
-      @Html.LabelFor(model => model.Gender, "Female")
+        @Html.RadioButtonFor(model => model.Gender, "Male", new { @id="gender_male" })
+        @Html.LabelFor(model => model.Gender, "Male")
+        @Html.RadioButtonFor(model => model.Gender, "Female", new { @id="gender_female" })
+        @Html.LabelFor(model => model.Gender, "Female")
 
       @Html.LabelFor(model => model.Color)
       @Html.TextBoxFor(model => model.Color)
