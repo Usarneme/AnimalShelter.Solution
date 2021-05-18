@@ -7,3 +7,5 @@
 
 # environmental variables
 *.env
+*/appsettings.Development.json
+*/appsettings.json
