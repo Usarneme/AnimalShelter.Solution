@@ -1,16 +1,42 @@
-@* @using AnimalShelter.Models;
-@model List<Animal>;
+@using AnimalShelter.Models;
+@model AnimalShelter.Models.Animal;
 
 @{
   Layout = "_Layout";
 }
 
-<h4>Add a new task</h4>
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model._Name)
-  @Html.TextBoxFor(model => model._Gender)
-  <input type="submit" value="Add new task" />
-}
+<div class="container-fluid">
+  <h2 class="pt-5 pb-3">Add a new animal</h2>
+  <div class="container form_container">
+    @using (Html.BeginForm())
+    {
+      @Html.LabelFor(model => model.Name)
+      @Html.TextBoxFor(model => model.Name)
 
-<p>@Html.ActionLink("Show all items", "Index")</p> *@
+      @Html.LabelFor(model => model.Breed)
+      @Html.TextBoxFor(model => model.Breed)
+
+      @Html.LabelFor(model => model.Type)
+      @Html.TextBoxFor(model => model.Type)
+
+      @Html.LabelFor(model => model.AdmittanceDate)
+      @Html.TextBoxFor(model => model.AdmittanceDate, new { @type = "date" , @value = DateTime.Now })
+
+      @Html.LabelFor(model => model.EstimatedAge)
+      @Html.TextBoxFor(model => model.EstimatedAge,
+            new { @type = "number", @min = "0" })
+
+      @Html.LabelFor(model => model.Gender)
+      @Html.RadioButtonFor(model => model.Gender, "Male", new { @id="gender_male" })
+      @Html.LabelFor(model => model.Gender, "Male")
+
+      @Html.RadioButtonFor(model => model.Gender, "Female", new { @id="gender_female" })
+      @Html.LabelFor(model => model.Gender, "Female")
+
+      @Html.LabelFor(model => model.Color)
+      @Html.TextBoxFor(model => model.Color)
+      <input type="submit" value="Add new task" class="btn btn-lg btn-block btn-primary" />
+    }
+  </div>
+
+</div>

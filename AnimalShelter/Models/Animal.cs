@@ -14,16 +14,16 @@ namespace AnimalShelter.Models
     public DateTime AdmittanceDate { get; set; }
     public string Type { get; set; }
 
-    public Animal(string name, string gender, string breed, int estimatedAge, string color, DateTime admittanceDate, string type)
-    {
-      Name = name;
-      Gender = gender;
-      Breed = breed;
-      EstimatedAge = estimatedAge;
-      Color = color;
-      AdmittanceDate = admittanceDate;
-      Type = type;
-    }
+    // public Animal(string name, string gender, string breed, int estimatedAge, string color, DateTime admittanceDate, string type)
+    // {
+    //   Name = name;
+    //   Gender = gender;
+    //   Breed = breed;
+    //   EstimatedAge = estimatedAge;
+    //   Color = color;
+    //   AdmittanceDate = admittanceDate;
+    //   Type = type;
+    // }
 
   }
 }

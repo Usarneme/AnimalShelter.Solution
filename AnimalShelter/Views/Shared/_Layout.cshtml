@@ -8,8 +8,8 @@
   </head>
   <body>
     <nav>
-      <a href="/">Home</a>
-
+      @Html.ActionLink("Home", "Index", "Home")
+      @Html.ActionLink("Animals", "Index", "Animal")
     </nav>
     <main>
       @RenderBody()
